@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
 
     // Genera la URL para la página con todos los datos codificados
-    const baseURL = "https://registroarauco.github.io/RegistroArauco/";
+    const baseURLvisitas = "https://registroarauco.github.io/RegistroArauco/";
     const qrData = `fecharespuesta=${encodeURIComponent(fecharespuesta)}&patente=${encodeURIComponent(patente)}&empresa=${encodeURIComponent(empresa)}&rutempresa=${encodeURIComponent(rutempresa)}&nombre=${encodeURIComponent(nombre)}&apellidopaterno=${encodeURIComponent(apellidopaterno)}&apellidomaterno=${encodeURIComponent(apellidomaterno)}&rut=${encodeURIComponent(rut)}&contacto=${encodeURIComponent(contacto)}&email=${encodeURIComponent(email)}&lugar=${encodeURIComponent(lugar)}&fechainicio=${encodeURIComponent(fechainicio)}&fechatermino=${encodeURIComponent(fechatermino)}&horainicio=${encodeURIComponent(horainicio)}&horatermino=${encodeURIComponent(horatermino)}`;
    
-    const fullUrl = `${baseURL}?${qrData}`;
+    const fullUrl = `${baseURLvisitas}?${qrData}`;
     
     // Genera la URL para el código QR
     const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(fullUrl)}`;
