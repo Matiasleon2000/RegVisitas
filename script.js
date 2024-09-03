@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const contacto = urlParams.get('contacto') || 'No disponible';
     const email = urlParams.get('email') || 'No disponible';
     const area = urlParams.get('area') || 'No disponible';
-    const fechainicio = urlParams.get('fechainicio') || 'No disponible';
-    const fechatermino = urlParams.get('fechatermino') || 'No disponible';
     const horainicio = urlParams.get('horainicio') || 'No disponible';
     const horatermino = urlParams.get('horatermino') || 'No disponible';
+    const fechainicio = urlParams.get('fechainicio') || 'No disponible';
+    const fechatermino = urlParams.get('fechatermino') || 'No disponible';
 
     // Muestra los datos en la página
     const dataContainer = document.getElementById('data-container');
@@ -32,15 +32,15 @@ document.addEventListener('DOMContentLoaded', function() {
       <p><strong>Contacto:</strong> ${contacto}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Área donde se dirige:</strong> ${area}</p>
-      <p><strong>Fecha de inicio:</strong> ${fechainicio}</p>
-      <p><strong>Fecha de término:</strong> ${fechatermino}</p>
       <p><strong>Hora de Ingreso:</strong> ${horainicio}</p>
       <p><strong>Hora de salida:</strong> ${horatermino}</p>
+      <p><strong>Fecha de inicio:</strong> ${fechainicio}</p>
+      <p><strong>Fecha de término:</strong> ${fechatermino}</p>
     `;
 
     // Genera la URL para la página con todos los datos codificados
     const baseURLvisitas = "https://registroarauco.github.io/RegistroArauco/";
-    const qrData = `fecharespuesta=${encodeURIComponent(fecharespuesta)}&patente=${encodeURIComponent(patente)}&empresa=${encodeURIComponent(empresa)}&rutempresa=${encodeURIComponent(rutempresa)}&nombre=${encodeURIComponent(nombre)}&apellidopaterno=${encodeURIComponent(apellidopaterno)}&apellidomaterno=${encodeURIComponent(apellidomaterno)}&rut=${encodeURIComponent(rut)}&contacto=${encodeURIComponent(contacto)}&email=${encodeURIComponent(email)}&lugar=${encodeURIComponent(lugar)}&fechainicio=${encodeURIComponent(fechainicio)}&fechatermino=${encodeURIComponent(fechatermino)}&horainicio=${encodeURIComponent(horainicio)}&horatermino=${encodeURIComponent(horatermino)}`;
+    const qrData = `fecharespuesta=${encodeURIComponent(fecharespuesta)}&patente=${encodeURIComponent(patente)}&empresa=${encodeURIComponent(empresa)}&rutempresa=${encodeURIComponent(rutempresa)}&nombre=${encodeURIComponent(nombre)}&apellidopaterno=${encodeURIComponent(apellidopaterno)}&apellidomaterno=${encodeURIComponent(apellidomaterno)}&rut=${encodeURIComponent(rut)}&contacto=${encodeURIComponent(contacto)}&email=${encodeURIComponent(email)}&lugar=${encodeURIComponent(lugar)}&horainicio=${encodeURIComponent(horainicio)}&horatermino=${encodeURIComponent(horatermino)}&fechainicio=${encodeURIComponent(fechainicio)}&fechatermino=${encodeURIComponent(fechatermino)}`;
    
     const fullUrl = `${baseURLvisitas}?${qrData}`;
     
